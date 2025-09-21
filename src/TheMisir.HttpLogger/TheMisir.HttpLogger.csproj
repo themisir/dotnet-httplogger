@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+    <PropertyGroup>
+        <LangVersion>latest</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <TargetFrameworks>net9.0;net8.0</TargetFrameworks>
+        <OutputType>Library</OutputType>
+        <IsPackable>true</IsPackable>
+        <Version>0.1.0</Version>
+        <Authors>Misir Jafarov</Authors>
+        <Description>A lightweight and flexible HTTP request/response logging middleware for ASP.NET Core applications. Easily log HTTP traffic for debugging, monitoring, or auditing purposes.</Description>
+        <PackageProjectUrl>https://github.com/themisir/dotnet-httplogger</PackageProjectUrl>
+        <PackageTags>http logging, request logging, http tracing, aspnet logging</PackageTags>
+    </PropertyGroup>
+</Project>

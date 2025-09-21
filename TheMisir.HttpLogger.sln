@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMisir.HttpLogger", "src\TheMisir.HttpLogger\TheMisir.HttpLogger.csproj", "{F11AA118-6D8F-451F-8E17-7A1406A31FC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp1", "example\WebApp1\WebApp1.csproj", "{F5E4A75E-7D45-4356-8677-CFAEB5E98644}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{58F42400-8270-4036-A431-BDB1169DBED4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F11AA118-6D8F-451F-8E17-7A1406A31FC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F11AA118-6D8F-451F-8E17-7A1406A31FC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F11AA118-6D8F-451F-8E17-7A1406A31FC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F11AA118-6D8F-451F-8E17-7A1406A31FC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5E4A75E-7D45-4356-8677-CFAEB5E98644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E4A75E-7D45-4356-8677-CFAEB5E98644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E4A75E-7D45-4356-8677-CFAEB5E98644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E4A75E-7D45-4356-8677-CFAEB5E98644}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F5E4A75E-7D45-4356-8677-CFAEB5E98644} = {58F42400-8270-4036-A431-BDB1169DBED4}
+	EndGlobalSection
+EndGlobal
