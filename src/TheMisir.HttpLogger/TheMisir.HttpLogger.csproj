@@ -11,5 +11,7 @@
         <Description>A lightweight and flexible HTTP request/response logging middleware for ASP.NET Core applications. Easily log HTTP traffic for debugging, monitoring, or auditing purposes.</Description>
         <PackageProjectUrl>https://github.com/themisir/dotnet-httplogger</PackageProjectUrl>
         <PackageTags>http logging, request logging, http tracing, aspnet logging</PackageTags>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageLicenseUrl>https://github.com/themisir/dotnet-httplogger/blob/master/LICENSE</PackageLicenseUrl>
     </PropertyGroup>
 </Project>

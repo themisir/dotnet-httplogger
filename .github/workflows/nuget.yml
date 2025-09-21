@@ -1,0 +1,40 @@
+﻿name: NuGet
+
+on:
+  push:
+    tags: [ 'v*.*.*' ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 7.0.x
+      - name: Setup GitVersion
+        uses: gittools/actions/gitversion/setup@v0.9.7
+        with:
+          versionSpec: '5.x'
+      - name: Determine Version
+        id: gitversion
+        uses: gittools/actions/gitversion/execute@v0.9.7
+        with:
+          useConfigFile: true
+          configFilePath: ./.github/gitversion.yml
+
+      - name: Restore dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --configuration Release -p:Version=${{ steps.gitversion.outputs.AssemblySemVer }} -p:AssemblyVersion=${{ steps.gitversion.outputs.AssemblySemVer }} -p:InformationalVersion=${{ steps.gitversion.outputs.InformationalVersion }} --no-restore
+      - name: Test
+        run: dotnet test --configuration Release --no-build --verbosity normal
+      - name: Package
+        run: dotnet pack --configuration Release --include-symbols -o:package -p:SymbolPackageFormat=snupkg -p:PackageVersion=${{ steps.gitversion.outputs.AssemblySemVer }}
+      - name: Publish
+        run: dotnet nuget push ./package/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_TOKEN }}
